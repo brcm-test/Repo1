@@ -5,3 +5,4 @@ Edit 2
 Edit3
 Edited on Branch 1.1
 Another edit on 1.1
+There will be a conflict
