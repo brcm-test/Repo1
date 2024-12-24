@@ -8,3 +8,6 @@ on:
 jobs:
   call-license-check:
     uses: brcm-test/.github/.github/workflows/license-check.yml@main
+    with:
+      pull-request-target: true
+    secrets: inherit
