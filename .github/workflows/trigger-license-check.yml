@@ -1,4 +1,3 @@
-
 name: Trigger License Check
 
 on:
@@ -9,17 +8,9 @@ on:
 
 jobs:
   call-license-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Debug Inputs
-        run: |
-          echo "pull-request-target: ${{ inputs.pull-request-target || true }}"
-          echo "issue-comment: ${{ inputs.issue-comment || true }}"
-
-      - name: Invoke License Check Workflow
-        uses: brcm-test/.github/.github/workflows/license-check.yml@main
-        with:
-          pull-request-target: ${{ inputs.pull-request-target || true }}
-          issue-comment: ${{ inputs.issue-comment || true }}
-        secrets: inherit
-        
+    uses: brcm-test/.github/.github/workflows/license-check.yml@main
+    with:
+      pull-request-target: true
+      issue-comment: true
+    secrets: inherit
+    
